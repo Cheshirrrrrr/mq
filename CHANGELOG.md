@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.5.1] - 2018-06-18
+### Added
+- Instances `ToJSON` and `FromJSON` for `MessageType`.
+
 ## [0.1.5.0] - 2018-05-29
 ### Changed
 - Conversion of Exceptions into MQErrors, MQError packed into SomeException

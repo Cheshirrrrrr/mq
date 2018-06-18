@@ -6,6 +6,7 @@
 module System.MQ.Protocol.Internal.Instances () where
 
 import           Control.Monad                     ((>=>))
+import           Data.Aeson                        (FromJSON (..), ToJSON (..))
 import           Data.ByteString                   as BS (ByteString)
 import           Data.Map.Strict                   (Map, fromList, member, (!))
 import           Data.MessagePack.Types.Class      (MessagePack (..))
@@ -60,3 +61,6 @@ instance MessagePack Message where
 instance MessagePack MessageType where
   toObject = toObject . show
   fromObject = fmap read . fromObject
+
+instance ToJSON MessageType
+instance FromJSON MessageType
